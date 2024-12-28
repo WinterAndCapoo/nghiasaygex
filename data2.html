@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .login-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-form h2 {
+            margin-bottom: 20px;
+        }
+        .login-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .login-form input {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-form input::placeholder {
+            color: #999;
+        }
+        .password-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .password-container input {
+            width: calc(100% - 40px);
+            padding-right: 35px;
+        }
+        .password-container .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 35%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            opacity: 0.5;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: #0056b3;
+        }
+        .forgot-password {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .forgot-password a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            const emailPhone = document.getElementById('email-phone').value;
+            const password = document.getElementById('password').value;
+            if (emailPhone === 'nghiagay69@gmail.com' && password === 'nghiagay69') {
+                window.location.href = "https://www.facebook.com/nghia.inh.678775";
+            } else {
+                alert('Email hoặc số điện thoại hoặc mật khẩu không đúng. Vui lòng nhập lại.');
+            }
+        }
+
+        function togglePassword() {
+            const passwordField = document.getElementById('password');
+            const passwordToggle = document.getElementById('password-toggle');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                passwordToggle.src = 'https://img.icons8.com/ios-filled/20/000000/visible.png'; // Thay đổi đường dẫn biểu tượng nếu cần
+            } else {
+                passwordField.type = 'password';
+                passwordToggle.src = 'https://img.icons8.com/ios-filled/20/000000/invisible.png'; // Thay đổi đường dẫn biểu tượng nếu cần
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-form">
+        <h2>Đăng Nhập (để tới info)</h2>
+        <form onsubmit="validateForm(event)">
+            <label for="email-phone">Email hoặc Số Điện Thoại:</label>
+            <div class="password-container">
+                <input type="text" id="email-phone" name="email-phone" placeholder="mmb" required>
+            </div>
+            <label for="password">Mật Khẩu:</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+                <img src="https://img.icons8.com/ios-filled/20/000000/invisible.png" id="password-toggle" class="toggle-password" onmousedown="togglePassword()" onmouseup="togglePassword()" alt="Hiển thị mật khẩu">
+            </div>
+            <button type="submit">Đăng Nhập</button>
+        </form>
+        <div class="forgot-password">
+            <a href="matkhau.html">Quên mật khẩu?</a>
+        </div>
+    </div>
+</body>
+</html>
