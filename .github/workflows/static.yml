@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            object-fit: contain;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        button {
+            padding: 12px 20px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const emailPhone = document.getElementById('email-phone').value;
+            const password = document.getElementById('password').value;
+            if (emailPhone !== 'nghiagay69@gmail.com' || password !== 'nghiabeldonthan69') {
+                alert('Email hoặc số điện thoại hoặc mật khẩu không đúng. Vui lòng nhập lại.');
+                return false;
+            }
+            return true;
+        }
+
+        function togglePassword() {
+            const passwordField = document.getElementById('password');
+            const passwordToggle = document.getElementById('password-toggle');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                passwordToggle.src = 'https://img.icons8.com/ios-filled/20/000000/visible.png'; // Thay đổi đường dẫn biểu tượng nếu cần
+            } else {
+                passwordField.type = 'password';
+                passwordToggle.src = 'https://img.icons8.com/ios-filled/20/000000/invisible.png'; // Thay đổi đường dẫn biểu tượng nếu cần
+            }
+        }
+
+        function navigateToData2() {
+            window.location.href = "data2.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Thuê ông bố đơn thân</h1>
+        <p>Giá siêu <b><i><mark>ưu đãi</mark></i></b>!</p>
+        <img src="ae2c3de1-851e-45c9-b47b-19a9224395a9.jpg" alt="Giới thiệu">
+        <p>Thông tin: 17 tuổi (sắp 18)</p>
+        <p>Ông bố đơn thân xương cốt, với con cặc đủ để làm cho lỗ đít của bạn phải bùng cháy, sung sướng hơn cả chơi ma túy, với kinh nghiệm 12 năm some tập thể, mút cặc chéo, liếm đầu cặc, thông lỗ đít, cắn bao quy đầu, mút niệu đạo, với con cặc quỷ của mình, anh ấy tự tin làm cho hậu môn của bạn ngập ngụa trong tinh trắng, ngoài ra khi đi theo gói VIP bạn sẽ được tặng thêm các dịch vụ đi kèm cực kích thích, mút lông đít, xoắn tinh hoàn, và sẽ quấn cổ bạn ngạt thở bằng con cặc của anh ấy . Giá chỉ (699K/1h)</p>
+        <h2>Thời gian sinh hoạt:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ngày</th>
+                    <th>Thời gian đi ia</th>
+                    <th>Thời gian say gex</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>28/12</td>
+                    <td>2 tiếng</td>
+                    <td>1 tiếng rưỡi</td>
+                </tr>
+                <tr>
+                    <td>29/12</td>
+                    <td>1 tiếng rưỡi</td>
+                    <td>2 tiếng</td>
+                </tr>
+                <tr>
+                    <td>30/12</td>
+                    <td>khám trĩ</td>
+                    <td>gần 3 tiếng</td>
+                </tr>
+                <tr>
+                    <td>1/1</td>
+                    <td>gần 3 tiếng</td>
+                    <td>2 tiếng</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="navigateToData2()">Thuê</button>
+    </div>
+</body>
+</html>
